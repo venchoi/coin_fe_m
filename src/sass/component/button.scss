@@ -1,0 +1,77 @@
+@import '../common/variables.scss';
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 24px;
+  width: 60px;
+  border-radius: 3px;
+  line-height: 30px;
+  border: 1px solid #eef2f6;
+  text-align: center;
+  font-size: 12px;
+  background: #fff;
+  color: #707D8A;
+  cursor: pointer;
+  & + .button{
+    margin-left: 8px;
+  }
+  &:active,
+  &.active{
+    color: #fff;
+    background: $blue;
+  }
+  > .iconfont {
+    font-size: 14px;
+    font-weight: normal;
+    margin-right: 8px;
+  }
+  &.small{
+    width: 44px;
+    font-size: 11px;
+    > .iconfont {
+      margin-right: 6px;
+    }
+  }
+  &.large{
+    > .iconfont {
+      margin-right: 8px;
+    }
+  }
+  &.main,
+  &.good,
+  &.bad,
+  &.search{
+    color: $assist1;
+    background: #EEF2F6;
+    &:active,
+    &.active{
+      color: #fff;
+    }
+  }
+  &.main{
+    &:active,
+    &.active{
+      background: $blue;
+    }
+  }
+  &.good{
+    &:active,
+    &.active{
+      background: $green;
+    }
+  }
+  &.bad{
+    &:active,
+    &.active{
+      background: $red;
+    }
+  }
+  &.search{
+    &:active,
+    &.active{
+      background: #ffa162;
+    }
+  }
+}

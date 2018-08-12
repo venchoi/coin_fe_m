@@ -1,0 +1,100 @@
+@import '../common/common.scss';
+@import '../component/tabs.scss';
+@import '../component/card/press-card.scss';
+@import '../component/card/deep-card.scss';
+@import '../component/card/coin-card.scss';
+@import '../component/layer/simpleLayer.scss';
+.r-side {
+  >.search {
+    width: 24px;
+    position: relative;
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      left: 0;
+      bottom: -13px;
+      height: 2px;
+      width: 24px;
+      background-color: $blue;
+    }
+  }
+}
+
+.main-container {
+  padding-top: 17px;
+  border-top: 1px solid $division;
+  .search {
+    position: relative;
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    width: 100%;
+    .search-button {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 12px;
+      top: 0;
+      padding-left: 16px;
+      height: 100%;
+      width: 36px;
+      color: #A8B4BF;
+      i {
+        font-size: 24px;
+      }
+    }
+    .search-input {
+      height: 40px;
+      padding: 6px 12px 6px 40px;
+      margin: 0 20px;
+      border-radius: 3px;
+      border: 1px solid rgba(#C7D2DC, .75);
+      color: $strong;
+      font-size: 14px;
+      &:focus {
+        border: 1px solid rgba($assist2, .75)
+      }
+    }
+    .search-list {
+      position: absolute;
+      top: 42px;
+      left: 0;
+      width: 100%;
+      z-index: 999;
+      background: #fff;
+      .keyword-list {
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        margin: 0 20px;
+        border: 1px solid $division;
+        padding: 8px 0;
+        box-shadow: 0 16px 40px 0 rgba(0, 0, 0, 0.08);
+        .keyword-item {
+          width: 100%;
+          height: 32px;
+          line-height: 32px;
+          padding-left: 12px;
+          background: #fff;
+          font-size: 12px;
+          text-align: left;
+          cursor: pointer;
+          &.active {
+            background-color: rgba(238, 242, 246, 0.25);
+            color: $strong;
+          }
+        }
+      }
+    }
+  }
+  .search-result {
+    margin-top: 10px;
+    .no-single-result {
+      margin-top: 32px;
+      text-align: center;
+      font-size: 14px;
+      color: #707D8A;
+    }
+  }
+}

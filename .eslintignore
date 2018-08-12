@@ -1,0 +1,9 @@
+build/*.js
+config/*.js
+src/assets/dep/*.js
+dist
+src/lib/jqExtend/draggable.js
+src/js/index.js
+src/js/coin.js
+src/vendor/*
+src/component/photoswipe/init.js

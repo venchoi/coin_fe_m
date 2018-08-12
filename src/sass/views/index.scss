@@ -1,0 +1,17 @@
+@import '../common/common.scss';
+@import '../component/tabs.scss';
+@import '../component/card/press-card.scss';
+@import '../component/card/deep-card.scss';
+@import '../component/card/coin-card.scss';
+@import '../component/layer/simpleLayer.scss';
+.press-page {
+  .coins-container {
+    display: flex;
+    .coin-card {
+      margin-right: 0;
+    }
+  }
+  .more {
+    padding: 0 20px;
+  }
+}

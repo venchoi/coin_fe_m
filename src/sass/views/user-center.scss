@@ -1,0 +1,117 @@
+@import '../common/common.scss';
+@import '../component/tabs.scss';
+@import '../component/card/press-card.scss';
+@import '../component/card/deep-card.scss';
+@import '../component/card/coin-card.scss';
+.r-side {
+  >.user {
+    width: 24px;
+    position: relative;
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      left: 0;
+      bottom: -19px;
+      height: 2px;
+      width: 24px;
+      background-color: $blue;
+    }
+  }
+}
+
+.main-container {
+  border-top: 1px solid $division;
+  .user-page {
+    padding: 0 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    text-align: left;
+    .column {
+      &.base-info {
+        display: flex;
+        padding: 32px 0;
+        height: 144px;
+        .portrait {
+          width: 80px;
+          height: 80px;
+          img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+          }
+          span {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #eef2f6;
+            color: #a8b4bf;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            i {
+              font-size: 60px;
+            }
+          }
+        }
+        .info {
+          margin-left: 24px;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          .nickname {
+            margin-bottom: 5px;
+            font-size: 24px;
+            color: #0B1013;
+            line-height: 24px;
+          }
+          .id {
+            font-size: 14px;
+            color: #A8B4BF;
+            line-height: 22px;
+          }
+        }
+      }
+      &.collect>a,
+      &.concern>a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 54px;
+        width: 100%;
+        border-bottom: 1px solid $division;
+        .title {
+          font-size: 14px;
+          color: #0B1013;
+          font-weight: bold;
+          line-height: 20px;
+        }
+        .count {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          color: #707D8A;
+          text-align: right;
+          line-height: 14px;
+          span {
+            display: flex;
+            align-items: center;
+            margin-right: 12px;
+            > i {
+              font-size: 24px;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+      .log-out {
+        margin-top: 17px;
+        font-size: 14px;
+        color: #707D8A;
+      }
+    }
+  }
+}

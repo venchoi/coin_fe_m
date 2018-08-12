@@ -1,0 +1,58 @@
+@import '../common/common.scss';
+@import '../component/button.scss';
+@import '../component/card/coin-card.scss';
+.r-side {
+  >.user {
+    width: 24px;
+    position: relative;
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      left: 0;
+      bottom: -19px;
+      height: 2px;
+      width: 24px;
+      background-color: $blue;
+    }
+  }
+}
+
+.main-container {
+  border-top: 1px solid $division;
+  .page-title {
+    padding: 12px 20px;
+    height: 48px;
+    text-align: left;
+    font-size: 16px;
+    color: #0B1013;
+    letter-spacing: -0.33px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+  .collect-none > div{
+    margin-top: 80px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      height: 129px;
+    }
+    .tips {
+      margin-top: 32px;
+      font-size: 16px;
+      color: #333333;
+    }
+    .postscript {
+      margin-top: 8px;
+      font-size: 13px;
+      color: #707D8A;
+    }
+    .button {
+      margin-top: 32px;
+      width: 100px;
+      height: 32px;
+    }
+  }
+}

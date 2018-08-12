@@ -1,0 +1,196 @@
+@import '../common/common.scss';
+@import '../component/tabs.scss';
+@import '../component/button.scss';
+@import '../component/card/press-card.scss';
+@import '../component/card/deep-card.scss';
+@import '../component/layer/simpleLayer.scss';
+.main-container {
+  .aside {
+    display: flex;
+    flex-flow: column;
+    .market {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+      height: 40px;
+      background-color: #394551;
+      color: #FFFFFF;
+      .price {
+        display: inline-block;
+        margin-right: 24px;
+        font-size: 14px;
+        font-weight: bold;
+      }
+      .ratio {
+        font-size: 14px;
+        font-weight: bold;
+      }
+    }
+    .info {
+      display: flex;
+      padding: 24px 20px;
+      min-height: 128px;
+      .logo {
+        position: relative;
+        margin-right: 16px;
+        border-radius: 50%;
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        >img {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          height: 100%;
+        }
+        >span {
+          display: flex;
+          align-items: center;
+          margin-right: 16px;
+          width: 80px;
+          height: 80px;
+          border-radius: 50%;
+          >i {
+            font-size: 80px;
+            color: #EEF2F6;
+          }
+        }
+      }
+      .main-info {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        .head-title {
+          font-size: 24px;
+          color: #0B1013;
+          line-height: 32px;
+        }
+        .source {
+          display: flex;
+          width: 180px;
+          font-size: 13px;
+          line-height: 20px;
+          text-align: left;
+          word-break: keep-all;
+          text-overflow: ellipsis;
+          height: 20px;
+          overflow: hidden;
+          white-space: nowrap;
+          .abbrev {
+            display: inline-block;
+            color: #707D8A;
+          }
+          >a {
+            display: inline-block;
+            max-width: 200px;
+            color: $blue;
+            word-break: keep-all;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            overflow: hidden;
+            &::after {
+              content: ',';
+              color: $blue;
+            }
+            &:last-child {
+              &::after {
+                content: '';
+              }
+            }
+          }
+        }
+        .follow {
+          height: 24px;
+          font-size: 12px;
+          text-align: center;
+          vertical-align: middle;
+          color: #fff;
+          background-color: #5f99da;
+          &::before {
+            content: '关注';
+          }
+          &.active {
+            color: #5f99da;
+            background-color: #fff;
+            &::before {
+              content: '已关注';
+            }
+          }
+        }
+      }
+    }
+    .data-source {
+      font-size: 12px;
+      color: #A8B4BF;
+    }
+  }
+  .desc {
+    padding: 0 20px;
+    .white-paper {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      border-bottom: 1px solid $division;
+      height: 48px;
+      font-size: 13px;
+      color: #394551;
+      i {
+        color: $assist2;
+        font-size: 24px;
+      }
+      span {
+        display: inline-block;
+        padding-left: 16px;
+      }
+      .arrow {
+        margin-left: auto;
+        color: $assist1;
+      }
+    }
+    .intro {
+      font-size: 14px;
+      color: #394551;
+      >div {
+        padding: 16px 0;
+        border-bottom: 1px solid $division;
+        &:last-child {
+          border-bottom: none;
+        }
+        text-align: left;
+        h1 {
+          margin-bottom: 8px;
+          font-size: 16px;
+          line-height: 20px;
+          color: #0b1013;
+        }
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          padding: 20px 0 7px 0;
+          border-top: 1px solid rgba(32, 42, 51, 0.08);
+          &:first-of-type {
+            border-top: 0;
+          }
+        }
+        p {
+          margin-bottom: 16px;
+        }
+        .text {
+          font-size: 14px;
+          color: #394551;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  .coin-detail-page {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}

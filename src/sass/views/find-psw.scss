@@ -1,0 +1,52 @@
+@import '../common/common.scss';
+@import '../component/form/form.scss';
+@import '../component/tabs.scss';
+.r-side {
+  >.user {
+    width: 24px;
+    position: relative;
+    &::after {
+      position: absolute;
+      display: inline-block;
+      content: '';
+      left: 0;
+      bottom: -19px;
+      height: 2px;
+      width: 24px;
+      background-color: $blue;
+    }
+  }
+}
+
+.main-container {
+  border-top: 1px solid $division;
+  .find-psw-page {
+    margin-top: 24px;
+    .tabs {
+      .tab-item {
+        color: $strong;
+        font-weight: bold;
+      }
+    }
+    .find-password-dialog,
+    .reset-password-dialog { 
+      .layer-header {
+        border-bottom: none;
+        .tab-item {
+          font-weight: bold;
+          color: $strong;
+        }
+      }
+    }
+    .find-password-dialog {
+      .content-item {
+        >div {
+          margin-bottom: 24px;
+          &:last-child {
+            margin-bottom: none;
+          }
+        }
+      }
+    }
+  }
+}
